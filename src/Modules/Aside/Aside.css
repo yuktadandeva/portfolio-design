@@ -1,0 +1,22 @@
+.aside{
+    padding: 20px;
+    position: relative;
+}
+ul li{
+    font-weight: 200;
+}
+p{
+    font-weight: 200;
+}
+h4{
+    font-weight: 400;
+}
+.flex{
+    display: flex;
+}
+
+svg:hover{
+transform: scale(0.8);
+transition:transform 0.5 ease;
+}
+

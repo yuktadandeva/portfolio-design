@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+   }
+   
+.dashboard{
+       height: 95vh;
+       width: 97vw;
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+      
+}
+
+   .grid{
+    margin-top: 10px;
+    display: grid;
+    width: 100%;
+    height: 80vh;
+    grid-template-columns: 5fr 2fr;
+   }
+
+   .grid div{
+    border-radius: 15px;
+   }
+
+   .grid1{
+    display: grid;
+    grid-template-columns: 6fr 1fr 5fr;
+    grid-template-rows: 4fr 3fr;
+    height: 100%;
+    width: 100%;
+    gap: 10px;
+   }
+
+   .grid2{
+      gap: 10px;
+    margin-left: 5px;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-rows: 5fr 1fr;
+   }
+
+   .gridbox1{
+    grid-column: span 2;
+    background-color: rgb(214, 239, 248);
+
+    
+   }
+
+  .header{
+opacity: 0;
+  }
+   .gridbox1, .gridbox3,.gridbox4,.gridbox5,.gridbox6{
+opacity: 0;
+transition: opacity 0.5s ease-in-out;
+   }
+
+   .header.visible {
+      opacity: 1;
+      animation: introheader;
+      animation-duration: 0.5s;
+     animation-timing-function: ease-in;
+    /* animation-delay: 1s; */
+     animation-iteration-count: 1;
+   }
+   /* @keyframes introheader {
+      0%{
+         width: 10%;
+      }100%{
+         width: 100%;
+      }
+
+   } */
+
+
+   .gridbox1.visible,
+   .gridbox3.visible,
+   .gridbox4.visible,
+   .gridbox5.visible,
+   .gridbox6.visible{
+      opacity: 1;
+         }
+
+   .gridbox2{
+    background-color: rgb(197, 235, 248);
+    animation: intro;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    /* animation-delay: 1s; */
+    animation-iteration-count: 1;
+
+   }
+   @keyframes intro {
+      0%{
+         transform: translate(-50px,70px) scale(1.2);
+         /* transform: scale(0.7); */
+      }
+      15%{
+         transform: translate(-50px,50px) scale(1.2);
+      }30%{
+         transform: scale(1.2);
+      }80%{
+         transform: scale(1);
+      }
+      100%{
+         transform: translate(0,0);
+         /* transform: scale(1); */
+      }
+   }
+
+   .gridbox3{
+    background-color: rgb(208, 238, 248);
+   }
+
+   .gridbox4{
+    grid-column: span 2;
+    background-color: rgb(132, 217, 245);
+   }
+   .gridbox5{
+    background-color: rgb(197, 235, 248);
+   }
+   .gridbox6{
+    background-color:  rgb(214, 239, 248);
+   }
+
